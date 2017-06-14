@@ -1,0 +1,4 @@
+www.google.com
+www.microsoft.com
+www.dollarthoughts.net
+www.dollarthoughts.net/thisisafilethatwillneverexist>404
