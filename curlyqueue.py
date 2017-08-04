@@ -30,8 +30,8 @@ def curlyqueue(queue):
 
 def lambda_handler(event, context):
     s3 = boto3.resource("s3")
-    s3.Bucket(event.get("bucket")).download_file(event.get("key"), "config.json")
-    with open("config.json") as configf:    
+    s3.Bucket(event.get("bucket")).download_file(event.get("key"), "/tmp/config.json")
+    with open("/tmp/config.json") as configf:    
             config = json.load(configf)
     results = curlyqueue(config)
     if results.get("fail_count") > 0:
