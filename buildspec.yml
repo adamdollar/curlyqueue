@@ -7,8 +7,7 @@ phases:
       - pip install requests -t .
   build:
     commands:
-      - zip -r lambda.zip curlyqueue.py requests
-      - zip -r lambda.zip curlyqueue.py urllib3
+      - zip -r lambda.zip *
       - aws lambda update-function-code --function-name ${target_lambda} --zip-file fileb://lambda.zip
 
 artifacts:
