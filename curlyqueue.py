@@ -41,7 +41,7 @@ def lambda_handler(event, context):
             account_id = context.invoked_function_arn.split(":")[4]
             sns_topic_name = os.environ.get("OUTPUTTOPIC")
             sns_topic_arn = "arn:aws:sns:{}:{}:{}".format(region_name, account_id, sns_topic_name)
-            sns.publish(TopicArn=sns_topic_arn, Message="\n".join(results.get("messages")), 
+            boto3.client('sns').publish(TopicArn=sns_topic_arn, Message="\n".join(results.get("messages")), 
                 Subject="curlyqueue failures", MessageStructure='string')
 
 
