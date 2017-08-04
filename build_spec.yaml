@@ -1,0 +1,11 @@
+version: 0.2
+            
+phases:
+  build:
+    commands:
+      - zip lambda.zip curlyqueue.py
+      - aws lambda update-function-code --function-name ${target_lambda} --zip-file fileb://lambda.zip
+
+artifacts:
+  files:
+    - lambda.zip
