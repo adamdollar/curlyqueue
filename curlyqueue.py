@@ -3,6 +3,7 @@ import json
 import requests
 import sys
 import boto3
+import os
 from argparse import ArgumentParser
 
 def curlyqueue(queue):
