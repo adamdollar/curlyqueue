@@ -4,9 +4,10 @@ phases:
   install:
     commands:
       - yum install -y zip
+      - pip install requests -t .
   build:
     commands:
-      - zip lambda.zip curlyqueue.py
+      - zip -r lambda.zip curlyqueue.py requests
       - aws lambda update-function-code --function-name ${target_lambda} --zip-file fileb://lambda.zip
 
 artifacts:
