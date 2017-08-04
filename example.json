@@ -1,0 +1,18 @@
+[
+	{
+		"url": "https://www.google.com",
+		"code": 200
+	},
+	{
+		"url": "https://www.microsoft.com",
+		"code": 200
+	},
+	{
+		"url": "https://www.dollarthoughts.net",
+		"code": 200
+	},
+	{
+		"url": "https://www.dollarthoughts.net/thisisafilethatwillneverexist",
+		"code": 404
+	}
+]
