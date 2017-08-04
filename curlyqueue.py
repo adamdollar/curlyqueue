@@ -23,7 +23,7 @@ def curlyqueue(queue):
             print(output)
             if code != response.status_code:
                 fail_count += 1
-                bad_urls.append(output)
+                messages.append(output)
 
     return {"fail_count": fail_count, "messages": messages}
 
